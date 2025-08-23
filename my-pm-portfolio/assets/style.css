@@ -1,0 +1,469 @@
+/*
+  Global stylesheet for the PM portfolio website.
+  This file defines design tokens and implements basic layout
+  components such as containers, grids, typography styles,
+  buttons, cards, forms and the timeline. A dark mode is
+  supported via the `.dark` class on the <html> element.
+*/
+
+/* Design tokens */
+:root {
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Color palette for light mode */
+  --color-background-light: #F7F8FA;
+  --color-surface-light: #FFFFFF;
+  --color-text-light: #0B0C0E;
+  --color-primary-light: #4F46E5;
+  --color-primary-light-hover: #6366F1;
+  --color-accent-light: #06B6D4;
+  --color-accent-light-hover: #0EA5E9;
+
+  /* Color palette for dark mode */
+  --color-background-dark: #0B0C0E;
+  --color-surface-dark: #15171A;
+  --color-text-dark: #E6E8EB;
+  --color-primary-dark: #818CF8;
+  --color-primary-dark-hover: #A5B4FC;
+  --color-accent-dark: #22D3EE;
+  --color-accent-dark-hover: #67E8F9;
+
+  /* Semantic colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Border radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-lifted: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-overlay: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode overrides via `.dark` on html */
+.dark {
+  --color-background-light: var(--color-background-dark);
+  --color-surface-light: var(--color-surface-dark);
+  --color-text-light: var(--color-text-dark);
+  --color-primary-light: var(--color-primary-dark);
+  --color-primary-light-hover: var(--color-primary-dark-hover);
+  --color-accent-light: var(--color-accent-dark);
+  --color-accent-light-hover: var(--color-accent-dark-hover);
+}
+
+/* Reset & base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  background-color: var(--color-background-light);
+  scroll-behavior: smooth;
+}
+
+html.dark body {
+  color: var(--color-text-dark);
+  background-color: var(--color-background-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary-light-hover);
+  text-decoration: underline;
+}
+
+html.dark a {
+  color: var(--color-primary-dark);
+}
+
+html.dark a:hover,
+html.dark a:focus {
+  color: var(--color-primary-dark-hover);
+}
+
+/* Container utility */
+.container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+/* Sections */
+.section {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lifted);
+  margin-top: var(--space-6);
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button-primary {
+  background-color: var(--color-primary-light);
+  color: #ffffff;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: var(--color-primary-light-hover);
+  color: #ffffff;
+}
+
+html.dark .button-primary {
+  background-color: var(--color-primary-dark);
+}
+
+html.dark .button-primary:hover,
+html.dark .button-primary:focus {
+  background-color: var(--color-primary-dark-hover);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--color-primary-light);
+  border: 2px solid var(--color-primary-light);
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  background-color: var(--color-primary-light);
+  color: #ffffff;
+}
+
+html.dark .button-secondary {
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+html.dark .button-secondary:hover,
+html.dark .button-secondary:focus {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-surface-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lifted);
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.card-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+html.dark .card {
+  background-color: var(--color-surface-dark);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-background-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+.navbar a {
+  margin-right: var(--space-3);
+  font-weight: 500;
+}
+
+.navbar a:last-child {
+  margin-right: 0;
+}
+
+html.dark .navbar {
+  background-color: var(--color-background-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+.footer {
+  padding: var(--space-6) var(--space-4);
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+html.dark .footer {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-dark);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-4);
+}
+
+table thead {
+  background-color: var(--color-surface-light);
+}
+
+html.dark table thead {
+  background-color: var(--color-surface-dark);
+}
+
+table th,
+table td {
+  padding: var(--space-2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+html.dark table th,
+html.dark table td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+label {
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: var(--space-2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-light);
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+}
+
+html.dark input[type="text"],
+html.dark input[type="email"],
+html.dark textarea {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-dark);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input[type="submit"],
+button[type="submit"] {
+  background-color: var(--color-primary-light);
+  color: #ffffff;
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background-color: var(--color-primary-light-hover);
+}
+
+html.dark input[type="submit"],
+html.dark button[type="submit"] {
+  background-color: var(--color-primary-dark);
+}
+
+html.dark input[type="submit"]:hover,
+html.dark button[type="submit"]:hover {
+  background-color: var(--color-primary-dark-hover);
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: var(--space-8);
+  border-left: 2px solid var(--color-primary-light);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-primary-light);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-6);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -var(--space-4);
+  top: 0.25rem;
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+}
+
+html.dark .timeline {
+  border-color: var(--color-primary-dark);
+}
+
+html.dark .timeline::before,
+html.dark .timeline-item::before {
+  background-color: var(--color-primary-dark);
+}

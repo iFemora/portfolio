@@ -1,0 +1,14 @@
+{
+  "name": "my-pm-portfolio",
+  "version": "1.0.0",
+  "description": "A modern product manager portfolio for Oluwafemi Siji‑Kenneth.",
+  "scripts": {
+    "dev": "python3 -m http.server 3000 --directory .",
+    "build": "echo 'Static site – no build step'",
+    "preview": "python3 -m http.server 3000 --directory .",
+    "lint": "echo 'No lint configured'",
+    "format": "echo 'No formatter configured'",
+    "check:links": "echo 'Link checking not implemented'"
+  },
+  "license": "MIT"
+}

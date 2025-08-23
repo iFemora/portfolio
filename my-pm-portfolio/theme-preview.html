@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theme Preview</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <main class="container section">
+    <h1>Theme Preview</h1>
+    <p>This page showcases the type scale, buttons, cards and form styles in both light and dark mode.</p>
+
+    <h2>Headings</h2>
+    <h1>H1 Heading</h1>
+    <h2>H2 Heading</h2>
+    <h3>H3 Heading</h3>
+
+    <h2>Text & Links</h2>
+    <p>This is a paragraph of body text. It demonstrates how text appears in the default body styles. <a href="#">This is a link.</a></p>
+
+    <h2>Buttons</h2>
+    <div style="display:flex; gap: var(--space-4); margin-bottom: var(--space-4);">
+      <a href="#" class="button button-primary">Primary Button</a>
+      <a href="#" class="button button-secondary">Secondary Button</a>
+    </div>
+
+    <h2>Card</h2>
+    <div class="card" style="max-width: 300px;">
+      <img src="images/hero.png" alt="Placeholder" />
+      <div class="card-body">
+        <h3>Card Title</h3>
+        <p>This is a card description demonstrating the card component styling.</p>
+        <a href="#" class="button button-secondary">Learn more</a>
+      </div>
+    </div>
+
+    <h2>Form</h2>
+    <form onsubmit="return false;" style="max-width: 400px;">
+      <label for="preview-name">Name</label>
+      <input id="preview-name" type="text" />
+      <label for="preview-email">Email</label>
+      <input id="preview-email" type="email" />
+      <label for="preview-message">Message</label>
+      <textarea id="preview-message"></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h2>Dark Mode</h2>
+    <p>Toggle dark mode using the button in the navigation bar to see how these components adapt.</p>
+  </main>
+</body>
+</html>
