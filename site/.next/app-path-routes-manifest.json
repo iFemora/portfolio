@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/favicon.ico/route": "/favicon.ico",
+  "/now/page": "/now",
+  "/page": "/",
+  "/work/fcmb-cib/page": "/work/fcmb-cib",
+  "/work/page": "/work",
+  "/work/payments-platform/page": "/work/payments-platform",
+  "/writing/balancing-user-needs/page": "/writing/balancing-user-needs",
+  "/writing/page": "/writing",
+  "/writing/payment-onboarding/page": "/writing/payment-onboarding",
+  "/writing/product-discovery/page": "/writing/product-discovery"
+}

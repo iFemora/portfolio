@@ -1,0 +1,21 @@
+// Subtle star-like dots for the hero background
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    100px 200px rgba(255,255,255,0.15),
+    300px 400px rgba(255,255,255,0.1),
+    500px 150px rgba(255,255,255,0.12),
+    700px 350px rgba(255,255,255,0.08),
+    900px 100px rgba(255,255,255,0.1),
+    150px 500px rgba(255,255,255,0.15),
+    450px 550px rgba(255,255,255,0.1),
+    650px 250px rgba(255,255,255,0.12),
+    850px 450px rgba(255,255,255,0.08),
+    200px 300px rgba(255,255,255,0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}

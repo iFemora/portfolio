@@ -1,0 +1,95 @@
+// Navbar
+.navbar-transparent {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-white {
+  background-color: white !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+
+  .navbar-brand,
+  .nav-link {
+    color: #333 !important;
+  }
+}
+
+.navbar-transparent {
+  .navbar-brand,
+  .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+
+    &:hover {
+      color: white !important;
+    }
+  }
+
+  .toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+  }
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+// Social icons in hero
+.socialicons {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0 1rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: white;
+    transform: translateY(-3px);
+  }
+}
+
+// Skills tabs
+.skills-tabs .nav-link {
+  color: #555;
+  font-weight: 500;
+
+  &.active {
+    color: #533483;
+    border-bottom: 2px solid #533483;
+  }
+}
+
+// Progress bars
+.progress {
+  border-radius: 4px;
+  background-color: #e9ecef;
+}
+
+// Experience section
+#experience {
+  .fw-bold {
+    font-size: 1.1rem;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+
+    li {
+      margin-bottom: 0.4rem;
+      color: #555;
+    }
+  }
+}
+
+// About section
+#aboutme {
+  background-color: #fff;
+}
+
+// Footer
+footer {
+  border-top: 1px solid #e5e5e5;
+}
