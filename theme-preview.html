@@ -7,11 +7,13 @@
     <meta name="description" content="Preview of typography, colors, and components for the PM portfolio site." />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="icon" type="image/png" href="./images/favicon.png" />
-  </head>
+    <script>tailwind.config={darkMode:"class"}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
   <body>
     <header class="w-full shadow-subtle sticky top-0 bg-surface-light dark:bg-surface-dark z-50">
       <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 md:px-6">
-        <a href="/" class="font-heading text-xl font-bold text-primary dark:text-primary-dark">Oluwafemi</a>
+        <a href="/portfolio/" class="font-heading text-xl font-bold text-primary dark:text-primary-dark">Oluwafemi</a>
         <button id="theme-toggle" class="ml-auto p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Toggle dark mode">
           <span class="sr-only">Toggle theme</span>
           <svg id="theme-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
