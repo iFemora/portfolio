@@ -1,0 +1,19 @@
+@keyframes gradient {
+  0%   { background-position: 0% 50%;   }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%;   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.bgstyle {
+  animation: gradient 10s ease infinite;
+  -webkit-animation: gradient 10s ease infinite;
+}
+
+.title {
+  animation: fadeIn 1s ease-in-out;
+}

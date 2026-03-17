@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/work/layout,_N_T_/work/fcmb-cib/layout,_N_T_/work/fcmb-cib/page,_N_T_/work/fcmb-cib"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/work/fcmb-cib/__PAGE__",
+    "/work/fcmb-cib",
+    "/work",
+    "/_index",
+    "/_head"
+  ]
+}

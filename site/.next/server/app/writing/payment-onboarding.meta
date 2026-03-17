@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/writing/layout,_N_T_/writing/payment-onboarding/layout,_N_T_/writing/payment-onboarding/page,_N_T_/writing/payment-onboarding"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/writing/payment-onboarding/__PAGE__",
+    "/writing/payment-onboarding",
+    "/writing",
+    "/_index",
+    "/_head"
+  ]
+}
